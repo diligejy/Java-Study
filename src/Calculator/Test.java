@@ -10,11 +10,23 @@ public class Test {
 		System.out.println("두 번째 값을 입력하세요.");
 		Scanner sc2 = new Scanner(System.in);
 		int u2 = sc2.nextInt();
-		System.out.println("입력하신 값은 " + u1 +", "+ u2 + "입니다");
-		System.out.println("덧셈의 결과는" + (u1+u2) + "입니다");
-		System.out.println("뺄셈의 결과는" + (u1-u2) + "입니다");
-		System.out.println("곱셈의 결과는" + (u1*u2) + "입니다");
-		System.out.println("나눗셈의 결과는" + ((double)u1/u2) + "입니다");
+		System.out.println("입력하신 값은 " + u1 + ", " + u2 + "입니다");
+		
+		System.out.println("사칙 연산 중 원하는 연산자를 입력하세요");
+		Scanner scanner = new Scanner(System.in);
+		String symbol = scanner.next();
+		if ("+".equals(symbol)) {
+			System.out.println("덧셈의 결과는" + (u1 + u2) + "입니다");
+		} else if ("-".equals(symbol)) {
+			System.out.println("뺄셈의 결과는" + (u1 - u2) + "입니다");
+		} else if ("*".equals(symbol)) {
+			System.out.println("곱셈의 결과는" + (u1 * u2) + "입니다");
+		} else if ("/".equals(symbol)) {
+			System.out.println("나눗셈의 결과는" + ((double) u1 / u2) + "입니다");
+		} else {
+			System.out.println("사칙연산에 해당하지 않는 값을 입력했습니다.");
+		}
+
 	}
-	
+
 }
